@@ -3,8 +3,9 @@
   const total = slides.length;
   const SPEAKERS = {
     1: { name: 'Speaker 1', role: 'Brand & Message', color: 'var(--s1)' },
-    2: { name: 'Speaker 2', role: 'Market & Media', color: 'var(--s2)' },
-    3: { name: 'Speaker 3', role: 'Creative & Launch', color: 'var(--s3)' }
+    2: { name: 'Speaker 2', role: 'Product & Audience', color: 'var(--s2)' },
+    3: { name: 'Speaker 3', role: 'Media & Advertising', color: 'var(--s3)' },
+    4: { name: 'Speaker 4', role: 'Radio & Launch', color: 'var(--s4)' }
   };
   const $ = (id) => document.getElementById(id);
   const chip = $('speakerChip'), bar = $('progressBar'), cur = $('cur');
@@ -54,7 +55,7 @@
 
   // build menu grouped by speaker
   const cols = $('menuCols');
-  [1, 2, 3].forEach((k) => {
+  [1, 2, 3, 4].forEach((k) => {
     const col = document.createElement('div');
     col.className = 'menu-col';
     col.style.setProperty('--c', SPEAKERS[k].color);
